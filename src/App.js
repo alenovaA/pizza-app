@@ -1,17 +1,24 @@
 import './App.css';
 import Categories from './components/Categories';
 import Header from './components/Header';
+import PizzaBlock from './components/PizzaBlock';
+import Sort from './components/Sort';
 import './scss/app.scss';
 
 function App() {
   return (
-    <div className="App">
-      <div className="wrapper">
+    <div classNameName="App">
+      <div classNameName="wrapper">
         <Header />
-        <div class="content">
-          <div class="container">
-            <div class="content__top">
-              <Categories/>
+        <div className="content">
+          <div className="container">
+            <div className="content__top">
+              <Categories />
+            </div>
+            <Sort/>
+
+            <div className="content__items">
+              <PizzaBlock />
             </div>
           </div>
         </div>

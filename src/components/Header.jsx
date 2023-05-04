@@ -1,17 +1,17 @@
 function Header() {
   return ( <div class="header">
-  <div class="container">
-    <div class="header__logo">
+  <div className="container">
+    <div className="header__logo">
       <img width="38" src="./img/pizza-logo.svg" alt="Pizza logo" />
       <div>
         <h1>React Pizza</h1>
         <p>the most delicious pizza in the universe</p>
       </div>
     </div>
-    <div class="header__cart">
-      <a href="/cart.html" class="button button--cart">
+    <div className="header__cart">
+      <a href="/cart.html" className="button button--cart">
         <span>0 $</span>
-        <div class="button__delimiter"></div>
+        <div className="button__delimiter"></div>
         <svg
           width="18"
           height="18"

@@ -7,16 +7,17 @@ import './scss/app.scss';
 
 function App() {
   return (
-    <div classNameName="App">
-      <div classNameName="wrapper">
+    <div className="App">
+      <div className="wrapper">
         <Header />
         <div className="content">
           <div className="container">
             <div className="content__top">
               <Categories />
+              <Sort/>
             </div>
-            <Sort/>
-
+           
+            <h2 className="content__title">All Pizzas</h2>
             <div className="content__items">
               <PizzaBlock />
             </div>

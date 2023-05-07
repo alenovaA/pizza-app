@@ -1,39 +1,36 @@
-import React from 'react';
+import React from "react";
 
-function PizzaBlock({title,price,category,imageUrl, types, sizes}) {
-  const typesNames  = ['Thin', 'Thick'];
+function PizzaBlock({ title, price, category, imageUrl, types, sizes }) {
+  const typesNames = ["Thin", "Thick"];
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
 
-
-  return ( 
+  return (
     <div className="pizza-block">
-      <img
-        className="pizza-block__image"
-        src={imageUrl}
-        alt="Pizza"
-      />
+      <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       <h4 className="pizza-block__title">{title}</h4>
       <div className="pizza-block__selector">
         <ul>
-        {types.map ( (typeId)=> (
-          <li 
-          key={typeId} 
-          onClick = {()=> setActiveType(typeId)} 
-          className={activeType === typeId ? 'active' : ''} 
-          >{typesNames[typeId]}</li>
-          ))
-          }
+          {types.map((typeId) => (
+            <li
+              key={typeId}
+              onClick={() => setActiveType(typeId)}
+              className={activeType === typeId ? "active" : ""}
+            >
+              {typesNames[typeId]}
+            </li>
+          ))}
         </ul>
         <ul>
-          {sizes.map ( (sizeId,index)=> (
-         <li 
-         key={sizeId} 
-         onClick = {()=> setActiveSize(index)} 
-         className={activeSize === index ? 'active' : ''} 
-         >{sizeId}</li>
-        ))
-        }
+          {sizes.map((sizeId, index) => (
+            <li
+              key={sizeId}
+              onClick={() => setActiveSize(index)}
+              className={activeSize === index ? "active" : ""}
+            >
+              {sizeId}
+            </li>
+          ))}
           {/* <li className="active">26 см.</li >
           <li>30 см.</li>
           <li>40 см.</li> */}
@@ -58,7 +55,7 @@ function PizzaBlock({title,price,category,imageUrl, types, sizes}) {
           <i>2</i>
         </div>
       </div>
-</div> 
-)
+    </div>
+  );
 }
 export default PizzaBlock;
